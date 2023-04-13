@@ -1,53 +1,54 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-[#41644a] text-white flex space-around justify-center gap-20 py-3">
       <section>
         <ul>
-          <h1>Navigation</h1>
-          <li>
-            <a href="">Home</a>
+          <h1 className="font-semibold text-sm">Navigation</h1>
+          <li className="text-xs">
+            <NavLink to="/">Home</NavLink>
           </li>
-          <li>
-            <a href="">About</a>
+          <li className="text-xs">
+            <NavLink to="/">About</NavLink>
           </li>
-          <li>
-            <a href="">Menu</a>
+          <li className="text-xs">
+            <NavLink to="/">Menu</NavLink>
           </li>
-          <li>
-            <a href="">Reservations</a>
+          <li className="text-xs">
+            <NavLink to="/booking">Reservations</NavLink>
           </li>
-          <li>
-            <a href="">Order Online</a>
+          <li className="text-xs">
+            <NavLink to="/">Order Online</NavLink>
           </li>
-          <li>
-            <a href="">Login</a>
+          <li className="text-xs">
+            <NavLink to="/">Login</NavLink>
           </li>
         </ul>
       </section>
       <section>
-        <h1>Contact</h1>
+        <h1 className="font-semibold text-sm">Contact</h1>
         <ul>
-          <li>
-            <a href="">Address</a>
+          <li className="text-xs">
+            <NavLink to="/">Address</NavLink>
           </li>
-          <li>
-            <a href="">Phone Number</a>
+          <li className="text-xs">
+            <NavLink to="/">Phone Number</NavLink>
           </li>
-          <li>
-            <a href="">Email</a>
+          <li className="text-xs">
+            <NavLink to="/">Email</NavLink>
           </li>
         </ul>
       </section>
       <section>
-        <h1>Social Media Links</h1>
+        <h1 className="font-semibold text-sm">Social Media Links</h1>
         <ul>
-          <li>
-            <a href="">Facebook</a>
+          <li className="text-xs">
+            <NavLink to="/">Facebook</NavLink>
           </li>
-          <li>
-            <a href="">Instagram</a>
+          <li className="text-xs">
+            <NavLink to="/">Instagram</NavLink>
           </li>
         </ul>
       </section>

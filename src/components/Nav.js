@@ -1,26 +1,27 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav>
-      <ul>
+      <ul className="flex gap-6 text-sm pt-1">
         <li>
-          <a href="">Home</a>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <a href="">About</a>
+          <NavLink to="/">About</NavLink>
         </li>
         <li>
-          <a href="">Menu</a>
+          <NavLink to="/">Menu</NavLink>
         </li>
         <li>
-          <a href="">Reservations</a>
+          <NavLink to="/booking">Reservations</NavLink>
         </li>
         <li>
-          <a href="">Order Online</a>
+          <NavLink to="/">Order Online</NavLink>
         </li>
         <li>
-          <a href="">Login</a>
+          <NavLink to="/">Login</NavLink>
         </li>
       </ul>
     </nav>
