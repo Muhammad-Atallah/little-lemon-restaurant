@@ -4,35 +4,44 @@ import Header from "./components/Header";
 import Homepage from "./pages/Homepage";
 import BookingPage from "./pages/BookingPage";
 import { Route, Routes } from "react-router-dom";
+import ConfirmedBooking from "./components/ConfirmedBooking";
 import { useReducer, useState } from "react";
+import { fetchAPI, submitAPI } from "./data/apiFunctions";
 
-const initialState = [
-  { time: "17:00" },
-  { time: "18:00" },
-  { time: "19:00" },
-  { time: "20:00" },
-  { time: "21:00" },
-  { time: "22:00" },
-];
-
-const reducer = (state, action) => {
-  console.log(state);
-  return [...state];
+const initializeTimes = () => {
+  return fetchAPI(new Date());
 };
 
-function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+console.log(initializeTimes());
 
-  // const updateTimes = (date) => {
-  //   setAvailableTimes([
-  //     { time: "17:00" },
-  //     { time: "18:00" },
-  //     { time: "19:00" },
-  //     { time: "20:00" },
-  //     { time: "21:00" },
-  //     { time: "22:00" },
-  //   ]);
-  // };
+const updateTimes = (date) => {
+  return fetchAPI(new Date(date));
+};
+
+const reducer = (state, action) => {
+  if (action.id === "res-date") {
+    return updateTimes(action.value);
+  } else {
+    return [...state];
+  }
+};
+function App() {
+  const [state, dispatch] = useReducer(reducer, initializeTimes());
+
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [guests, setGuests] = useState(1);
+  const [occasion, setOccasion] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [bookingDetails, setBookingDetails] = useState({
+    name: "",
+    email: "",
+    time: "",
+    date: "",
+    guests: 1,
+    occasion: "",
+  });
 
   return (
     <>
@@ -41,8 +50,47 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route
-            path="/booking"
-            element={<BookingPage state={state} dispatch={dispatch} />}
+            path="booking"
+            element={
+              <BookingPage
+                state={state}
+                dispatch={dispatch}
+                date={date}
+                setDate={setDate}
+                time={time}
+                setTime={setTime}
+                guests={guests}
+                setGuests={setGuests}
+                occasion={occasion}
+                setOccasion={setOccasion}
+                name={name}
+                setName={setName}
+                email={email}
+                setEmail={setEmail}
+                submitAPI={submitAPI}
+                bookingDetails={bookingDetails}
+                setBookingDetails={setBookingDetails}
+              />
+            }
+          />
+          <Route
+            path="confirmedBooking"
+            element={
+              <ConfirmedBooking
+                date={date}
+                setDate={setDate}
+                time={time}
+                setTime={setTime}
+                guests={guests}
+                setGuests={setGuests}
+                occasion={occasion}
+                setOccasion={setOccasion}
+                name={name}
+                setName={setName}
+                email={email}
+                setEmail={setEmail}
+              />
+            }
           />
         </Routes>
       </main>
