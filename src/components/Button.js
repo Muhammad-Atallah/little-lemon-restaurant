@@ -5,6 +5,7 @@ const Button = ({ buttonText, buttonColor }) => {
   return (
     <NavLink to="/booking">
       <button
+        aria-label={buttonText}
         className={
           buttonColor === "yellow"
             ? "p-2 rounded-[16px] bg-[#F4CE14] text-black text-sm"

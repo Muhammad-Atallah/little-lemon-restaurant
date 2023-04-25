@@ -5,8 +5,8 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <section style={{ "font-family": "Karla" }} className="w-full ">
-      <section className="flex max-w-[1400px] m-auto px-10 mb-2 py-10 justify-between bg-[#41644a]">
-        <section className="flex flex-col gap-8 self-start">
+      <section className="flex max-w-[1400px] m-auto px-10 mb-2 py-10 bg-[#41644a]">
+        <section className="w-full flex flex-col gap-8 self-start">
           <RestaurantDescription
             background="green"
             description="Indulge in the vibrant flavors of the Mediterranean at our restaurant.
@@ -15,10 +15,10 @@ const Hero = () => {
           />
           <Button buttonText="Reserve a Table" buttonColor="yellow" />
         </section>
-        <section className="self-end">
+        <section className="w-full justify-center hidden sm:flex">
           <img
             src={require("../assets/icons_assets/restauranfood.png")}
-            className="w-lg min-w-[15rem] w-[15rem] relative rounded-[16px]"
+            className=" w-auto md:w-[15rem] relative rounded-[16px]"
             alt="restaurant food"
           />
         </section>

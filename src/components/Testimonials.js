@@ -36,7 +36,7 @@ const Testimonials = () => {
       <section className="flex justify-between">
         <h1 className="text-[40px] font-semibold">What our customers say!</h1>
       </section>
-      <section className="flex justify-around">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center items-center gap-5">
         {testimonialsData.map((testimonial) => (
           <TestimonialCard
             customerName={testimonial.customerName}

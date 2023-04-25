@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 
 const TestimonialCard = ({ customerImage, customerName, customerReview }) => {
   return (
-    <article className="flex flex-col gap-4 max-w-[13rem] shadow-md bg-white p-2 rounded-[16px] shadow-md">
+    <article className="flex flex-col gap-4 w-[13rem] h-[17rem] shadow-md bg-white p-2 rounded-[16px]">
       <section className="flex text-[#F4CE14]">
         <AiFillStar />
         <AiFillStar />

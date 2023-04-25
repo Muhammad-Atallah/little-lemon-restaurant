@@ -13,14 +13,16 @@ const SpecialCard = ({ dishName, dishPrice, dishDescription, dishImage }) => {
         />
       </section>
 
-      <section className="bg-[#EDEFEE] h-[12rem] flex flex-col gap-3 p-2 justify-center">
+      <section className="bg-[#EDEFEE] h-[13rem] flex flex-col gap-3 p-2 justify-center">
         <section className="flex justify-between">
           <h1 className="text-[18px] font-bold">{dishName}</h1>
           <h2 className="text-orange-500 text-sm">{dishPrice}</h2>
         </section>
-        <p className="text-sm">{dishDescription}</p>
+        <p className="text-xs sm:text-sm">{dishDescription}</p>
         <NavLink className="bg-[#EDEFEE] flex gap-2 items-center">
-          <h3 className="text-sm font-semibold">Order a delivery</h3>
+          <h3 aria-label="order a delivery" className="text-sm font-semibold">
+            Order a delivery
+          </h3>
           <GiScooter />
         </NavLink>
       </section>

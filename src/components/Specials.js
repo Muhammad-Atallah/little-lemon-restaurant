@@ -31,11 +31,13 @@ const Specials = () => {
       style={{ "font-family": "Karla" }}
       className="flex flex-col max-w-[1400px] m-auto px-10 mb-2 py-10 gap-10"
     >
-      <section className="flex justify-between">
-        <h1 className="text-[40px] font-semibold">This weeks specials!</h1>
+      <section className="flex justify-between items-center">
+        <h1 className="text-[30px] md:text-[40px] font-semibold">
+          This weeks specials!
+        </h1>
         <Button buttonText="Online Menu" buttonColor="green" />
       </section>
-      <section className="flex justify-around">
+      <section className="flex flex-col items-center gap-10 justify-center md:flex-row md:justify-around">
         {specialsData.map((special) => (
           <SpecialCard
             dishName={special.dishName}

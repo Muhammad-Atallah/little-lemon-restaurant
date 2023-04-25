@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Homepage from "./pages/Homepage";
 import BookingPage from "./pages/BookingPage";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import ConfirmedBooking from "./components/ConfirmedBooking";
 import { useReducer, useState } from "react";
 import { fetchAPI, submitAPI } from "./data/apiFunctions";
@@ -29,9 +29,9 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initializeTimes());
 
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState("17:00");
   const [guests, setGuests] = useState(1);
-  const [occasion, setOccasion] = useState("");
+  const [occasion, setOccasion] = useState("None");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [bookingDetails, setBookingDetails] = useState({
@@ -42,6 +42,8 @@ function App() {
     guests: 1,
     occasion: "",
   });
+
+  const navigation = useNavigate();
 
   return (
     <>
@@ -70,6 +72,7 @@ function App() {
                 submitAPI={submitAPI}
                 bookingDetails={bookingDetails}
                 setBookingDetails={setBookingDetails}
+                navigation={navigation}
               />
             }
           />

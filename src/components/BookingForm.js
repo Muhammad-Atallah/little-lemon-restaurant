@@ -1,6 +1,4 @@
-import { delay } from "framer-motion";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const BookingForm = ({
   state,
@@ -20,8 +18,8 @@ const BookingForm = ({
   submitAPI,
   bookingDetails,
   setBookingDetails,
+  navigation,
 }) => {
-  // const navigation = useNavigate();
   const handleChange = (e) => {
     const action = { id: e.target.id, value: e.target.value };
     dispatch(action);
@@ -50,9 +48,9 @@ const BookingForm = ({
     });
 
     setTimeout(() => {
-      submitAPI(bookingDetails);
-      // ? navigation("/confirmedBooking")
-      // : console.log("Form Rejected");
+      submitAPI(bookingDetails)
+        ? navigation("/confirmedBooking")
+        : console.log("Form Rejected");
     }, 500);
 
     setTimeout(() => {
@@ -64,11 +62,11 @@ const BookingForm = ({
     <form
       onChange={handleChange}
       onSubmit={handleForm}
-      className="flex flex-col gap-5"
+      className="flex flex-col gap-5 self-center"
       action=""
     >
       <article className="flex flex-col gap-1  justify-center items-center">
-        <label className="font-semibold text-sm" htmlFor="res-date">
+        <label className="font-semibold text-xs md:text-sm" htmlFor="res-date">
           Full Name
         </label>
         <input
@@ -84,7 +82,7 @@ const BookingForm = ({
         />
       </article>
       <article className="flex flex-col gap-1  justify-center items-center">
-        <label className="font-semibold text-sm" htmlFor="res-date">
+        <label className="font-semibold text-xs md:text-sm" htmlFor="res-date">
           Email
         </label>
         <input
@@ -103,7 +101,7 @@ const BookingForm = ({
       </article>
 
       <article className="flex flex-col gap-1  justify-center items-center">
-        <label className="font-semibold text-sm" htmlFor="res-date">
+        <label className="font-semibold text-xs md:text-sm" htmlFor="res-date">
           Choose date
         </label>
         <input
@@ -116,7 +114,7 @@ const BookingForm = ({
         />
       </article>
       <article className="flex flex-col gap-1 text-sm justify-center items-center">
-        <label className="font-semibold text-sm" htmlFor="res-time">
+        <label className="font-semibold text-xs md:text-sm" htmlFor="res-time">
           Choose time
         </label>
         <select
@@ -127,13 +125,13 @@ const BookingForm = ({
           id="res-time"
           value={time}
         >
-          {/* {state.map((availableTime) => (
-            <option>{availableTime}</option>
-          ))} */}
+          {state?.map((availableTime) => (
+            <option key={availableTime}>{availableTime}</option>
+          ))}
         </select>
       </article>
       <article className="flex flex-col gap-1 text-sm justify-center items-center">
-        <label className="font-semibold text-sm" htmlFor="guests">
+        <label className="font-semibold text-xs md:text-sm" htmlFor="guests">
           Number of guests
         </label>
         <input
@@ -148,7 +146,7 @@ const BookingForm = ({
         />
       </article>
       <article className="flex flex-col gap-1 text-sm justify-center items-center">
-        <label className="font-semibold text-sm" htmlFor="occasion">
+        <label className="font-semibold text-xs md:text-sm" htmlFor="occasion">
           Occasion
         </label>
         <select
@@ -157,6 +155,7 @@ const BookingForm = ({
           id="occasion"
           value={occasion}
         >
+          <option>None</option>
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
@@ -164,6 +163,7 @@ const BookingForm = ({
       {/* <NavLink to="/confirmedBooking"> */}
       <input
         className="text-sm justify-center cursor-pointer border-2 py-2 px-3 rounded-[16px] mt-2 bg-[#F4CE14]"
+        aria-label="make reservation"
         type="submit"
         value="Make Your reservation"
         // onClick={(e) => {

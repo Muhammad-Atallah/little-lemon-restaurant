@@ -10,5 +10,11 @@ test("renders form properly", () => {
 
   const emailInput = getByTestId("res-email");
   expect(emailInput).toHaveAttribute("required");
-  expect(emailInput).toHaveAttribute("pattern");
+  expect(emailInput).toHaveAttribute(
+    "pattern",
+    "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$"
+  );
+
+  const dateInput = getByLabelText("Choose date");
+  expect(dateInput).toHaveAttribute("required");
 });
