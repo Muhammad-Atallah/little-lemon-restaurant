@@ -35,7 +35,7 @@ const Specials = () => {
         <h1 className="text-[30px] md:text-[40px] font-semibold">
           This weeks specials!
         </h1>
-        <Button buttonText="Online Menu" buttonColor="green" />
+        <Button buttonText="Online Menu" buttonColor="green" to="/menu" />
       </section>
       <section className="flex flex-col items-center gap-10 justify-center md:flex-row md:justify-around">
         {specialsData.map((special) => (

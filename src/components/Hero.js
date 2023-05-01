@@ -13,7 +13,11 @@ const Hero = () => {
           Our menu features fresh ingredients, authentic dishes, and a warm,
           inviting atmosphere for an unforgettable dining experience."
           />
-          <Button buttonText="Reserve a Table" buttonColor="yellow" />
+          <Button
+            buttonText="Reserve a Table"
+            buttonColor="yellow"
+            to="/booking"
+          />
         </section>
         <section className="w-full justify-center hidden sm:flex">
           <img

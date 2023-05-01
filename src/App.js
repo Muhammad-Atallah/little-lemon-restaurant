@@ -7,6 +7,7 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import ConfirmedBooking from "./components/ConfirmedBooking";
 import { useReducer, useState } from "react";
 import { fetchAPI, submitAPI } from "./data/apiFunctions";
+import MenuPage from "./pages/MenuPage";
 
 const initializeTimes = () => {
   return fetchAPI(new Date());
@@ -46,11 +47,12 @@ function App() {
   const navigation = useNavigate();
 
   return (
-    <>
+    <div className="flex flex-col overflow-hidden">
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="menu" element={<MenuPage />} />
           <Route
             path="booking"
             element={
@@ -97,12 +99,8 @@ function App() {
           />
         </Routes>
       </main>
-      <section className="mb-auto flex flex-col">
-        <section className="w-full self-end">
-          <Footer />
-        </section>
-      </section>
-    </>
+      <Footer />
+    </div>
   );
 }
 

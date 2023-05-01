@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const Button = ({ buttonText, buttonColor }) => {
+const Button = ({ buttonText, buttonColor, to }) => {
   return (
-    <NavLink to="/booking">
+    <NavLink to={to}>
       <button
         aria-label={buttonText}
         className={

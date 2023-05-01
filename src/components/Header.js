@@ -39,7 +39,7 @@ const Header = (props) => {
           </li>
         </NavLink>
 
-        <NavLink onClick={handleBurgerButton} className="w-full" to="/">
+        <NavLink onClick={handleBurgerButton} className="w-full" to="menu">
           <li className="w-full border-b-[1px] border-gray-200 text-center p-2">
             Menu
           </li>
@@ -89,7 +89,7 @@ const Header = (props) => {
                 <NavLink to="/">About</NavLink>
               </li>
               <li>
-                <NavLink to="/">Menu</NavLink>
+                <NavLink to="menu">Menu</NavLink>
               </li>
               <li>
                 <NavLink to="/booking">Reservations</NavLink>
