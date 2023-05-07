@@ -8,6 +8,8 @@ import ConfirmedBooking from "./components/ConfirmedBooking";
 import { useReducer, useState } from "react";
 import { fetchAPI, submitAPI } from "./data/apiFunctions";
 import MenuPage from "./pages/MenuPage";
+import About from "./pages/About";
+import OrderPage from "./pages/OrderPage";
 
 const initializeTimes = () => {
   return fetchAPI(new Date());
@@ -53,6 +55,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="menu" element={<MenuPage />} />
+          <Route path="about" element={<About />} />
+          <Route path="order" element={<OrderPage />} />
+
           <Route
             path="booking"
             element={

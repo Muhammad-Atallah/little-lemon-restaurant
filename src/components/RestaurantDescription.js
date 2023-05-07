@@ -2,7 +2,7 @@ import React from "react";
 
 const RestaurantDescription = ({ description, background }) => {
   return (
-    <section className="flex flex-col gap-8 max-w-xl">
+    <section className="flex flex-col gap-8 max-w-xl max-h-[xl]">
       <section className="flex flex-col gap-0">
         <h1
           className={
@@ -17,7 +17,7 @@ const RestaurantDescription = ({ description, background }) => {
           className={
             background === "green"
               ? "text-[30px] md:text-[40px] text-white leading-4"
-              : "text-[30px] lg:text-[40px] text-[#41644a] leading-4"
+              : "text-[30px] lg:text-[40px] text-[#F4CE14] leading-4"
           }
         >
           Chicago
@@ -28,7 +28,7 @@ const RestaurantDescription = ({ description, background }) => {
           className={
             background === "green"
               ? "text-white text-[16px] md:text-[20px] mr-5"
-              : "text-[#41644a] text-[16px] lg:text-[20px]"
+              : "text-black text-[16px] lg:text-[20px]"
           }
         >
           {description}

@@ -33,7 +33,7 @@ const Header = (props) => {
           </li>
         </NavLink>
 
-        <NavLink onClick={handleBurgerButton} className="w-full" to="/">
+        <NavLink onClick={handleBurgerButton} className="w-full" to="about">
           <li className="w-full border-b-[1px] border-gray-200 text-center p-2">
             About
           </li>
@@ -51,7 +51,7 @@ const Header = (props) => {
           </li>
         </NavLink>
 
-        <NavLink onClick={handleBurgerButton} className="w-full" to="/">
+        <NavLink onClick={handleBurgerButton} className="w-full" to="/order">
           <li className="w-full border-b-[1px] border-gray-200 text-center p-2">
             Order Online
           </li>
@@ -81,23 +81,23 @@ const Header = (props) => {
                 size={30}
               />
             )}
-            <ul className="hidden md:flex gap-6 text-xs lg:text-sm ">
-              <li>
+            <ul className="hidden md:flex text-xs lg:text-sm ">
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <NavLink to="/">About</NavLink>
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
+                <NavLink to="about">About</NavLink>
               </li>
-              <li>
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
                 <NavLink to="menu">Menu</NavLink>
               </li>
-              <li>
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
                 <NavLink to="/booking">Reservations</NavLink>
               </li>
-              <li>
-                <NavLink to="/">Order Online</NavLink>
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
+                <NavLink to="/order">Order Online</NavLink>
               </li>
-              <li>
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
                 <NavLink to="/">Login</NavLink>
               </li>
             </ul>

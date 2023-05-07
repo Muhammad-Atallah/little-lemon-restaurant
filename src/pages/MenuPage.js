@@ -9,7 +9,7 @@ import {
   entrees,
   salads,
   desserts,
-} from "../components/data/menu";
+} from "../data/menu";
 
 const MenuPage = () => {
   const [menu, setMenu] = useState(appetizers);
