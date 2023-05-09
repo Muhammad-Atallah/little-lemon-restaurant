@@ -66,14 +66,17 @@ const BookingForm = ({
       action=""
     >
       <article className="flex flex-col gap-1  justify-center items-center">
-        <label className="font-semibold text-xs md:text-sm" htmlFor="res-date">
+        <label
+          className="font-semibold text-xs md:text-sm text-gray-500"
+          htmlFor="res-date"
+        >
           Full Name
         </label>
         <input
           onChange={(e) => {
             setName(e.target.value);
           }}
-          className="border-2 p-1 text-xs w-56"
+          className="border-2 p-1 text-xs w-56 rounded-md"
           type="text"
           id="res-name"
           value={name}
@@ -82,7 +85,10 @@ const BookingForm = ({
         />
       </article>
       <article className="flex flex-col gap-1  justify-center items-center">
-        <label className="font-semibold text-xs md:text-sm" htmlFor="res-date">
+        <label
+          className="font-semibold text-xs md:text-sm text-gray-500"
+          htmlFor="res-date"
+        >
           Email
         </label>
         <input
@@ -90,7 +96,7 @@ const BookingForm = ({
             setEmail(e.target.value);
             console.log(e.target);
           }}
-          className="border-2 p-1 text-xs w-56"
+          className="border-2 p-1 text-xs w-56 rounded-md"
           type="email"
           id="res-email"
           data-testid="res-email"
@@ -101,7 +107,10 @@ const BookingForm = ({
       </article>
 
       <article className="flex flex-col gap-1  justify-center items-center">
-        <label className="font-semibold text-xs md:text-sm" htmlFor="res-date">
+        <label
+          className="font-semibold text-xs md:text-sm text-gray-500"
+          htmlFor="res-date"
+        >
           Choose date
         </label>
         <input
@@ -114,7 +123,10 @@ const BookingForm = ({
         />
       </article>
       <article className="flex flex-col gap-1 text-sm justify-center items-center">
-        <label className="font-semibold text-xs md:text-sm" htmlFor="res-time">
+        <label
+          className="font-semibold text-xs md:text-sm text-gray-500"
+          htmlFor="res-time"
+        >
           Choose time
         </label>
         <select
@@ -131,7 +143,10 @@ const BookingForm = ({
         </select>
       </article>
       <article className="flex flex-col gap-1 text-sm justify-center items-center">
-        <label className="font-semibold text-xs md:text-sm" htmlFor="guests">
+        <label
+          className="font-semibold text-xs md:text-sm text-gray-500"
+          htmlFor="guests"
+        >
           Number of guests
         </label>
         <input
@@ -146,7 +161,10 @@ const BookingForm = ({
         />
       </article>
       <article className="flex flex-col gap-1 text-sm justify-center items-center">
-        <label className="font-semibold text-xs md:text-sm" htmlFor="occasion">
+        <label
+          className="font-semibold text-xs md:text-sm text-gray-500"
+          htmlFor="occasion"
+        >
           Occasion
         </label>
         <select
@@ -160,28 +178,12 @@ const BookingForm = ({
           <option>Anniversary</option>
         </select>
       </article>
-      {/* <NavLink to="/confirmedBooking"> */}
       <input
         className="text-sm justify-center cursor-pointer border-2 py-2 px-3 rounded-[16px] mt-2 bg-[#F4CE14]"
         aria-label="make reservation"
         type="submit"
         value="Make Your reservation"
-        // onClick={(e) => {
-        //   handleForm(e);
-        //   setBookingDetails({
-        //     name: name,
-        //     email: email,
-        //     time: time,
-        //     date: date,
-        //     guests: guests,
-        //     occasion: occasion,
-        //   });
-        //   submitAPI(bookingDetails)
-        //     ? navigation("/confirmedBooking")
-        //     : console.log("Form Rejected");
-        // }}
       />
-      {/* </NavLink> */}
     </form>
   );
 };

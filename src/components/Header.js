@@ -57,7 +57,7 @@ const Header = (props) => {
           </li>
         </NavLink>
 
-        <NavLink onClick={handleBurgerButton} className="w-full" to="/">
+        <NavLink onClick={handleBurgerButton} className="w-full" to="/login">
           <li className="w-full border-b-[1px] border-gray-200 text-center p-2">
             Login
           </li>
@@ -82,23 +82,23 @@ const Header = (props) => {
               />
             )}
             <ul className="hidden md:flex text-xs lg:text-sm ">
-              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition rounded-sm">
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition rounded-sm">
                 <NavLink to="about">About</NavLink>
               </li>
-              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition rounded-sm">
                 <NavLink to="menu">Menu</NavLink>
               </li>
-              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition rounded-sm">
                 <NavLink to="/booking">Reservations</NavLink>
               </li>
-              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition rounded-sm">
                 <NavLink to="/order">Order Online</NavLink>
               </li>
-              <li className="p-2 hover:bg-[#41644a] hover:text-white transition">
-                <NavLink to="/">Login</NavLink>
+              <li className="p-2 hover:bg-[#41644a] hover:text-white transition rounded-sm">
+                <NavLink to="/login">Login</NavLink>
               </li>
             </ul>
           </nav>

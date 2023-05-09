@@ -4,7 +4,7 @@ const MenuSection = ({ data, menuTitle }) => {
   console.log(data);
   return (
     <div className="flex flex-col justify-center justify-items-center gap-10 border-2 border-gray-100 py-5">
-      <h1 className="self-center font-serif uppercase tracking-[0.2em]">
+      <h1 className="self-center text-lg font-serif uppercase tracking-[0.2em]">
         {menuTitle}
       </h1>
       {data?.map((item) => (

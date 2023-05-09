@@ -61,7 +61,7 @@ const MenuPage = () => {
           buttonColor={menuTitle === "Desserts" && "yellow"}
         />
       </section>
-      <section className="self-center max-w-[1400px]">
+      <section className="self-center max-w-[1400px] mx-2">
         <MenuSection data={menu} menuTitle={menuTitle} />
       </section>
     </div>

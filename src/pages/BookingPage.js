@@ -26,7 +26,7 @@ const BookingPage = ({
       style={{ "font-family": "Karla" }}
       className="w-full flex justify-center justify-items-center items-center m-2"
     >
-      <section className="max-w-[50rem] m-5 flex flex-col md:flex-row border-2 rounded-md">
+      <section className="max-w-[50rem] m-5 flex flex-col md:flex-row border-2 rounded-md shadow-md">
         <img
           className="object-cover md:max-w-[20rem] rounded-l-md"
           src={require("../assets/icons_assets/restaurant chef B.jpg")}
