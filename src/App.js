@@ -11,6 +11,7 @@ import MenuPage from "./pages/MenuPage";
 import About from "./pages/About";
 import OrderPage from "./pages/OrderPage";
 import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
 
 const initializeTimes = () => {
   return fetchAPI(new Date());
@@ -59,6 +60,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="order" element={<OrderPage />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="signup" element={<SignUpPage />} />
 
           <Route
             path="booking"

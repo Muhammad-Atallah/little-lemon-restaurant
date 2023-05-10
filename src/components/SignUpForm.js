@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
-const LoginForm = () => {
+const SignUpForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState();
@@ -11,12 +11,15 @@ const LoginForm = () => {
   const handleForm = (e) => {
     e.preventDefault();
     console.log("submitted");
-    navigation("/");
+    navigation("/login");
   };
   return (
     <form onSubmit={handleForm} className="flex flex-col gap-6">
       <article className="flex flex-col gap-1 justify-center items-center">
-        <label className="font-semibold text-xs md:text-sm" htmlFor="email">
+        <label
+          className="font-semibold text-xs md:text-sm text-white"
+          htmlFor="email"
+        >
           Email
         </label>
         <input
@@ -31,7 +34,10 @@ const LoginForm = () => {
         />
       </article>
       <article className="flex flex-col gap-1  justify-center items-center">
-        <label className="font-semibold text-xs md:text-sm " htmlFor="password">
+        <label
+          className="font-semibold text-xs md:text-sm text-white"
+          htmlFor="password"
+        >
           Password
         </label>
         <input
@@ -42,41 +48,26 @@ const LoginForm = () => {
           required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          // pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}"
+          pattern="(?=.*[a-z]).{8,16}"
         />
+        <p className="text-[11px]">Password must be at least 8 characters</p>
       </article>
-      <section className="flex justify-between gap-10">
-        <article className="flex flex-row-reverse gap-1 justify-center items-center">
-          <label className="font-semibold text-xs" htmlFor="remember">
-            Remember for 30 days
-          </label>
-          <input
-            onChange={(e) => setRemember(e.target.checked)}
-            value={remember}
-            type="checkbox"
-            name="remember"
-            id="remember"
-          />
-        </article>
-        <NavLink className="font-bold text-xs text-black">
-          Forgot password?
-        </NavLink>
-      </section>
+
       <article className="flex flex-col gap-1  justify-center items-center">
         <input
           className="text-sm justify-center cursor-pointer border-2 py-2 px-3 rounded-[16px] mt-2 bg-[#F4CE14] text-black"
           type="submit"
-          value="Sign in"
+          value="Sign Up"
         />
       </article>
       <article className="flex justify-center gap-2 items-center">
-        <h1 className="font-semibold text-xs"> Don't have an account?</h1>
-        <NavLink to="/signup" className="font-bold text-xs text-black">
-          Sign up
+        <h1 className="font-semibold text-xs"> Already have an account?</h1>
+        <NavLink to="/login" className="font-bold text-xs text-black">
+          Log in
         </NavLink>
       </article>
     </form>
   );
 };
 
-export default LoginForm;
+export default SignUpForm;

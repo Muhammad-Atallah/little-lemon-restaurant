@@ -1,12 +1,10 @@
 import React from "react";
-import LoginForm from "../components/LoginForm";
+import SignUpForm from "../components/SignUpForm";
 
-const LoginPage = () => {
+const SignUpPage = () => {
   return (
     <section
-      style={{
-        "font-family": "Karla",
-      }}
+      style={{ "font-family": "Karla" }}
       className="w-full flex justify-center justify-items-center items-center h-[80vh]"
     >
       <section
@@ -18,16 +16,16 @@ const LoginPage = () => {
       >
         <section className="flex flex-col justify-center items-center gap-2">
           <h1 className="text-md md:text-xl font-semibold text-center">
-            Welcome Back!
+            Sign Up to Little Lemon
           </h1>
           <p className="text-xs md:text-sm text-center">
-            Please enter your login details.
+            Get special deals and track your orders!
           </p>
         </section>
-        <LoginForm />
+        <SignUpForm />
       </section>
     </section>
   );
 };
 
-export default LoginPage;
+export default SignUpPage;
