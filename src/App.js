@@ -12,6 +12,7 @@ import About from "./pages/About";
 import OrderPage from "./pages/OrderPage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
 
 const initializeTimes = () => {
   return fetchAPI(new Date());
@@ -51,7 +52,7 @@ function App() {
   const navigation = useNavigate();
 
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col">
       <Header />
       <main>
         <Routes>
@@ -61,6 +62,7 @@ function App() {
           <Route path="order" element={<OrderPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignUpPage />} />
+          <Route path="resetpassword" element={<ResetPasswordPage />} />
 
           <Route
             path="booking"

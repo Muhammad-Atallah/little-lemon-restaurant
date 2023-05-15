@@ -1,7 +1,30 @@
-import React from "react";
-const OrderMenuItem = ({ name, description, image, price }) => {
+import React, { useContext } from "react";
+import OrderContext from "../contexts/OrderContext";
+
+const OrderMenuItem = ({
+  name,
+  description,
+  image,
+  price,
+  subTotal,
+  setSubTotal,
+  items,
+  setItems,
+  setShowBasket,
+}) => {
+  const handleMenuItemClick = () => {
+    setSubTotal(subTotal + price);
+    setItems(() => [...items, { name: name, price: price }]);
+    setShowBasket(true);
+  };
+
+  console.log("subtTotal: " + subTotal);
+  items.map((item) => console.log(item));
   return (
-    <article className="h-[200px] w-[95%] sm:w-[250px] sm:h-[400px] border-2 rounded-md text-[#41644a] overflow-hidden flex flex-row-reverse sm:flex-col justify-between sm:justify-normal gap-2 text-center mx-4 sm:pb-2 cursor-pointer group ">
+    <article
+      onClick={handleMenuItemClick}
+      className="h-[200px] w-[95%] sm:w-[250px] sm:h-[400px] border-2 rounded-md text-[#41644a] overflow-hidden flex flex-row-reverse sm:flex-col justify-between sm:justify-normal gap-2 text-center mx-4 sm:pb-2 cursor-pointer group "
+    >
       <img
         className="w-[50%] object-cover sm:w-full sm:max-h-[60%] sm:h-[60%] rounded-r-md group-hover:scale-110 transition duration-500"
         src={image}
@@ -12,7 +35,7 @@ const OrderMenuItem = ({ name, description, image, price }) => {
           {name}
         </h1>
         <p className="text-[12px] w-full">{description}</p>
-        <h2 className="text-xs font-semibold">{price}</h2>
+        <h2 className="text-xs font-semibold">${price}</h2>
       </section>
     </article>
   );

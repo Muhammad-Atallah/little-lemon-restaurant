@@ -20,7 +20,7 @@ const LoginForm = () => {
           Email
         </label>
         <input
-          className="border-2 p-1 text-xs w-56 rounded-md"
+          className="border-2 p-1 text-xs w-56 rounded-md text-black"
           type="email"
           name="email"
           id="email"
@@ -35,7 +35,7 @@ const LoginForm = () => {
           Password
         </label>
         <input
-          className="border-2 p-1 text-xs w-56 rounded-md"
+          className="border-2 p-1 text-xs w-56 rounded-md text-black"
           type="password"
           name="password"
           id="password"
@@ -58,7 +58,7 @@ const LoginForm = () => {
             id="remember"
           />
         </article>
-        <NavLink className="font-bold text-xs text-black">
+        <NavLink to="/resetpassword" className="font-bold text-xs text-black">
           Forgot password?
         </NavLink>
       </section>

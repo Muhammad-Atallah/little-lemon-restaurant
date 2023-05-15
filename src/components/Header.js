@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import logo from "../assets/icons_assets/Logo .svg";
-import Nav from "./Nav";
 import { NavLink } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiFillShopping } from "react-icons/ai";
 
 const Header = (props) => {
   const [burgerButtonState, setBurgerButtonState] = useState(false);
@@ -65,9 +64,12 @@ const Header = (props) => {
       </ul>
 
       <section className="flex justify-between max-w-[1400px] m-auto px-10 items-center h-[2rem]">
-        <img src={logo} alt="logo" />
+        <NavLink to="/">
+          <img src={logo} alt="logo" />
+        </NavLink>
+
         <div>
-          <nav className="flex flex-row-reverse gap justify-center items-center ">
+          <nav className="flex flex-row-reverse gap justify-center items-center">
             {burgerButtonState ? (
               <AiOutlineClose
                 onClick={handleBurgerButton}
@@ -81,7 +83,7 @@ const Header = (props) => {
                 size={30}
               />
             )}
-            <ul className="hidden md:flex text-xs lg:text-sm ">
+            <ul className="hidden md:flex text-xs lg:text-sm">
               <li className="p-2 hover:bg-[#41644a] hover:text-white transition rounded-sm">
                 <NavLink to="/">Home</NavLink>
               </li>
