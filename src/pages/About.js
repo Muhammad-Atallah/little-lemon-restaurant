@@ -1,7 +1,7 @@
 import React from "react";
 import MarioAndAdrian from "../assets/icons_assets/Mario and Adrian b.jpg";
 import restaurantImage from "../assets/icons_assets/restaurant.jpg";
-import food from "../assets/icons_assets/food.avif";
+import food from "../assets/icons_assets/food.jpg";
 
 const About = () => {
   return (
