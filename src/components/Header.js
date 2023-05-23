@@ -22,8 +22,8 @@ const Header = (props) => {
       <ul
         className={
           burgerMenuState
-            ? "flex flex-col items-center py-16 text-sm bg-white text-black z-50 w-[100vw] h-[100vh] translate-y-[45px] fixed transition duration-500 ease-in-out"
-            : "flex flex-col items-center py-16 text-sm bg-white text-black z-50 w-[100vw] h-[100vh] translate-y-[45px] translate-x-[100%] fixed transition duration-500 ease-in-out"
+            ? "flex flex-col items-center py-16 text-sm bg-white text-black z-50 w-[107vw] h-[110vh] translate-y-[45px] fixed transition duration-500 ease-in-out"
+            : "flex flex-col items-center py-16 text-sm bg-white text-black z-50 w-[107vw] h-[110vh] translate-y-[45px] translate-x-[150%] fixed transition duration-500 ease-in-out"
         }
       >
         <NavLink onClick={handleBurgerButton} className="w-full" to="/">

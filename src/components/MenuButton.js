@@ -16,8 +16,8 @@ const MenuButton = ({
       aria-label={buttonText}
       className={
         buttonColor === "yellow"
-          ? "p-2 rounded-[16px] bg-[#F4CE14] text-black text-sm"
-          : "p-2 rounded-[16px] bg-[#41644a] text-white text-sm"
+          ? "text-[12px] sm:text-sm p-2 rounded-[16px] bg-[#F4CE14] text-black "
+          : "text-[12px] sm:text-sm p-2 rounded-[16px] bg-[#41644a] text-white"
       }
       onClick={handleMenu}
     >

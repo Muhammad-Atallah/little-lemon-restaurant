@@ -20,7 +20,7 @@ const MenuPage = () => {
       <section className="max-w-[1400px] self-center overflow-hidden">
         <img className="object-cover" src={mainPhoto} alt="Bruschetta" />
       </section>
-      <section className="self-center max-w-[1400px] flex gap-2">
+      <section className="self-center max-w-[1400px] grid grid-rows-2 grid-cols-3 sm:flex gap-2">
         <MenuButton
           buttonText="Appetizers"
           setMenu={setMenu}

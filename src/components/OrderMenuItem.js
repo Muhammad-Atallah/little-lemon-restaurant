@@ -18,8 +18,6 @@ const OrderMenuItem = ({
     setShowBasket(true);
   };
 
-  console.log("subtTotal: " + subTotal);
-  items.map((item) => console.log(item));
   return (
     <article
       onClick={handleMenuItemClick}
@@ -31,7 +29,7 @@ const OrderMenuItem = ({
         alt=""
       />
       <section className="w-[50%] sm:w-full flex flex-col justify-around gap-2 p-1">
-        <h1 className="text-sm sm:text-base w-full font-semibold uppercase">
+        <h1 className="text-xs sm:text-base w-full font-semibold uppercase">
           {name}
         </h1>
         <p className="text-[12px] w-full">{description}</p>
